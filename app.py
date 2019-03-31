@@ -33,9 +33,31 @@ def receive_message():
                         response_to_send = ""
                         response = bot_response(message['message'].get('text'))
                         if 'toprank' in response:
-                            response_to_send = "You want the best game"
+                            response_to_send += "You want the best game "
+                        if 'badrank' in response:
+                            response_to_send += "You want the worst game "
+                        if 'genre_question' in response:
+                            response_to_send += "You want the genre "
+                        if 'developer' in response:
+                            response_to_send += "You want the developer "
+                        if 'genre' in response:
+                            response_to_send += " You want a(n) {} game ".format(
+                                str(response['genre']))
+                        if 'Year_of_Release' in response:
+                            response_to_send += 'You want to know the realeased date '
+                        if 'sale' in response:
+                            response_to_send += "in terms of sales "
+                        if 'publisher' in response:
+                            response_to_send += "of {} ".format(
+                                str(response['publisher']))
+                        if 'game_name' in response:
+                            response_to_send += "of {} ".format(
+                                str(response['game_name']))
+                        if 'location' in response:
+                            response_to_send += "in {} ".format(
+                                str(response['location']))
                         if 'game_platform' in response:
-                            response_to_send += "On the platform {}".format(
+                            response_to_send += "on the platform {}".format(
                                 str(response['game_platform']))
                         send_message(recipient_id, response_to_send)
                     # if user sends us a GIF, photo,video, or any other non-text item

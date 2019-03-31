@@ -17,4 +17,4 @@ def bot_response(message_text):
     return (entities)
 
 
-#print(bot_response("What is the best game on XBOX360 ?"))
+#print(bot_response("What is the best game on XBOX360 in NA ?"))
