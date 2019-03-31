@@ -56,6 +56,8 @@ def receive_message():
                         if 'location' in response:
                             response_to_send += "in {} ".format(
                                 str(response['location']))
+                        if 'platform_question' in response:
+                            response_to_send += 'You want to know on the platform '
                         if 'game_platform' in response:
                             response_to_send += "on the platform {}".format(
                                 str(response['game_platform']))

@@ -1,9 +1,9 @@
 from wit import Wit
+import os
 
-access_token = "DQBWQ32EXR6VQFKBDK2BCQEHADZGYOCM"
+access_token = os.environ['WIT_ACCESS_TOKEN']
 
 client = Wit(access_token=access_token)
-
 
 def bot_response(message_text):
     resp = client.message(message_text)
