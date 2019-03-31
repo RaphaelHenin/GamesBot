@@ -1,3 +1,6 @@
 Flask==0.12.2
 pymessenger==0.0.7.0
 gunicorn==19.6.0
+prompt-toolkit==2.0.9
+wcwidth==0.1.7
+wit==5.1.0
