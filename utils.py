@@ -10,6 +10,7 @@ def bot_response(message_text):
     entities = {}
     try:
         for entity in list(resp["entities"]):
+            print(entity)
             entities[entity] = resp["entities"][entity][0]["value"]
     except:
         pass
